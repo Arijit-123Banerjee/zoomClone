@@ -1,27 +1,29 @@
-import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import SignInPage from "../src/auth/sign-in/SignInPage.jsx";
-import Home from "./components/Home.jsx";
-import DashBoard from "./components/DashBoard.jsx";
+import Home from "./Pages/Home.jsx";
 import { ClerkProvider } from "@clerk/clerk-react";
+import AuthPage from "./auth/AuthPage.jsx";
 
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
+// Replace this with your actual Clerk publishable key
+const clerkPublishableKey =
+  "pk_test_c2luY2VyZS1zaGVlcGRvZy0xNi5jbGVyay5hY2NvdW50cy5kZXYk";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-    children: [
-      { path: "/", element: <Home /> },
-      { path: "/dashboard", element: <DashBoard /> },
-    ],
+    children: [{ path: "/", element: <Home /> }],
   },
-  { path: "/auth/sign-in", element: <SignInPage /> },
+  { path: "/auth/sign-in", element: <AuthPage /> },
 ]);
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <ClerkProvider publishableKey={PUBLISHABLE_KEY} afterSignOutUrl="/">
-    <RouterProvider router={router} />
-  </ClerkProvider>
+
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <ClerkProvider publishableKey={clerkPublishableKey}>
+      <RouterProvider router={router} />
+    </ClerkProvider>
+  </StrictMode>
 );
