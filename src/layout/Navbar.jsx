@@ -1,4 +1,5 @@
 import { UserButton, useUser } from "@clerk/clerk-react";
+import ThemeChanger from "../Component/ThemeChanger";
 
 const Navbar = () => {
   const { isSignedIn } = useUser();
@@ -66,7 +67,6 @@ const Navbar = () => {
           </nav>
         </div>
       </header>
-      ;
     </>
   );
 };

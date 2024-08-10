@@ -1,6 +1,15 @@
 const Home = () => {
   return (
     <div className="flex justify-center items-center flex-col p-8 md:p-20 lg:p-44">
+      <div className="flex w-[20%] max-md:w-[40%] p-1 max-md:p-0 bg-[#dfe0e2] rounded-3xl gap-4 max-md:gap-2  md:h-[30px] items-center max-md:hidden">
+        <div className="bg-[#007dfc] rounded-3xl w-[30%] max-md:w-[40%] text-center text-white text-sm">
+          New
+        </div>
+        <a href="" className="flex-1 text-center md:text-left text-sm">
+          <span className="lg:inline-block md:hidden">Logoipsum</span> V.1.0
+        </a>
+      </div>
+
       <h1 className="font-bold text-[36px] md:text-[48px] lg:text-[60px] text-slate-700 text-center">
         Easy scheduling <span className="text-[#007dfc]">ahead</span>
       </h1>
