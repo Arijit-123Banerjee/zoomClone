@@ -1,12 +1,11 @@
 import { UserButton, useUser } from "@clerk/clerk-react";
-import ThemeChanger from "../Component/ThemeChanger";
 
 const Navbar = () => {
   const { isSignedIn } = useUser();
   return (
     <>
-      <header className="mb-2 px-4 shadow sticky to">
-        <div className="relative mx-auto flex max-w-screen-lg flex-col py-4 sm:flex-row sm:items-center sm:justify-between">
+      <header className="mb-2 px-4 shadow sticky to bg-white">
+        <div className="relative mx-auto flex max-w-screen-lg flex-col items-center justify-between py-4 sm:flex-row">
           <img
             src="https://meeting-scheduler-tubeguruji.vercel.app/logo.svg"
             className="w-[150px] md:w-[200px]"
@@ -35,20 +34,20 @@ const Navbar = () => {
             aria-label="Header Navigation"
             className="peer-checked:block hidden pl-2 py-6 sm:block sm:py-0"
           >
-            <ul className="flex flex-col gap-y-4 sm:flex-row sm:gap-x-8">
-              <li className="">
+            <ul className="flex flex-col items-center gap-y-4 sm:flex-row sm:gap-x-8">
+              <li>
                 <a className="text-gray-600 hover:text-[#0069ff]" href="#">
-                  Pricing
+                  Dashboard
                 </a>
               </li>
-              <li className="">
+              <li>
                 <a className="text-gray-600 hover:text-[#0069ff]" href="#">
-                  Demo
+                  Upgrade
                 </a>
               </li>
-              <li className="">
+              <li>
                 <a className="text-gray-600 hover:text-[#0069ff]" href="#">
-                  Support
+                  How its Work?
                 </a>
               </li>
               {isSignedIn ? (
@@ -56,7 +55,7 @@ const Navbar = () => {
               ) : (
                 <li className="mt-2 sm:mt-0">
                   <a
-                    className="rounded-xl border-2 border-[#0069ff] px-6 py-2 font-medium text-blue-600 hover:bg-blue-600 hover:text-white hover:duration-200 "
+                    className="rounded-xl border-2 border-[#0069ff] px-6 py-2 font-medium text-blue-600 hover:bg-blue-600 hover:text-white hover:duration-200"
                     href="#"
                   >
                     Get Started
