@@ -38,8 +38,8 @@ const Secion_Two = () => {
             </p>
           </div>
 
-          <div className="headline grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24 m-20 ">
-            <div className="md:p-8 lg:p-14 hover:bg-emerald-300 cursor-pointer">
+          <div className="headline grid grid-cols-1 mt-10 text-center sm:mt-16 sm:grid-cols-2 sm:gap-x-12 gap-y-12 md:grid-cols-3 md:gap-0 xl:mt-24 ">
+            <div className="md:p-8 lg:p-14 hover:shadow-xl	duration-200 rounded-2xl cursor-pointer">
               <svg
                 className="mx-auto"
                 width="46"
@@ -77,7 +77,7 @@ const Secion_Two = () => {
               </p>
             </div>
 
-            <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 hover:bg-emerald-300 cursor-pointer">
+            <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 hover:shadow-xl	duration-200 rounded-2xl cursor-pointer">
               <svg
                 className="mx-auto"
                 width="46"
@@ -119,7 +119,7 @@ const Secion_Two = () => {
               </p>
             </div>
 
-            <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 hover:bg-emerald-300 cursor-pointer">
+            <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 hover:shadow-xl	duration-200 rounded-2xl cursor-pointer">
               <svg
                 className="mx-auto"
                 width="46"
@@ -149,7 +149,7 @@ const Secion_Two = () => {
               </p>
             </div>
 
-            <div className="md:p-8 lg:p-14 md:border-t md:border-gray-200 hover:bg-emerald-300 cursor-pointer">
+            <div className="md:p-8 lg:p-14 md:border-t md:border-gray-200 hover:shadow-xl	duration-200 rounded-2xl cursor-pointer">
               <svg
                 className="mx-auto"
                 width="46"
@@ -192,7 +192,7 @@ const Secion_Two = () => {
               </p>
             </div>
 
-            <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t hover:bg-emerald-300 cursor-pointer">
+            <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t hover:shadow-xl	duration-200 rounded-2xl cursor-pointer">
               <svg
                 className="mx-auto"
                 width="46"
@@ -224,7 +224,7 @@ const Secion_Two = () => {
               </p>
             </div>
 
-            <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t hover:bg-emerald-300 cursor-pointer">
+            <div className="md:p-8 lg:p-14 md:border-l md:border-gray-200 md:border-t hover:shadow-xl	duration-200 rounded-2xl cursor-pointer">
               <svg
                 className="mx-auto"
                 width="46"
