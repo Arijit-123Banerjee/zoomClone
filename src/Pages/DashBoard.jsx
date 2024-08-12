@@ -1,47 +1,36 @@
+import DashBoardItems from "../Component/DashBoardItems";
+
 const DashBoard = () => {
+  const info = [
+    {
+      heading: "Create From Blank",
+      description:
+        "Create a professional resume quickly and easily, tailored to showcase your strengths and achievements. Perfect for any career stage.",
+      id: "1",
+    },
+    {
+      heading: "Surprise Me",
+      description:
+        "Elevate your resume with AI-powered insights and tailored templates. Create a standout resume effortlessly, designed to open doors to your next big opportunity.",
+      id: "2",
+    },
+  ];
+
   return (
     <>
-      {/* component */}
-      <div className=" min-h-screen flex items-center justify-center">
-        <div className=" h-screen flex-1 flex flex-col space-y-5 lg:space-y-0 lg:flex-row lg:space-x-10 max-w-6xl sm:p-6 sm:my-2 sm:mx-4 sm:rounded-2xl bg-transparent backdrop-blur-3xl ">
-          <div className="flex-1 px-2 sm:px-0">
-            <div className="flex justify-between items-center">
-              <h3 className="text-3xl  text-black font-bold">
-                Create Your <span className="text-blue-500"> AI resume</span>
-              </h3>
-            </div>
-            <div className="mb-10 sm:mb-0 mt-10 grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-              <div className="group border-2 py-20 px-4 flex flex-col space-y-2 items-center cursor-pointer rounded-md hover:shadow-xl hover:smooth-hover">
-                <a
-                  className="border-2 text-black  group-hover:smooth-hover flex w-20 h-20 rounded-full items-center justify-center"
-                  href="#"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-10 w-10"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={1}
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    />
-                  </svg>
-                </a>
-                <a
-                  className="text-black  group-hover:smooth-hover text-center"
-                  href="#"
-                >
-                  Create Resume
-                </a>
-              </div>
-            </div>
+      <section className="py-10  sm:py-16 lg:py-24">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl font-bold leading-tight text-gray-800 sm:text-4xl lg:text-5xl">
+              Crafting Your Future, One Resume at a Time with{" "}
+              <span className="text-blue-500">AI Precision</span>
+            </h2>
+          </div>
+          <div className="flex justify-around">
+            <DashBoardItems details={info} />
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

@@ -9,6 +9,8 @@ import AuthPage from "./auth/AuthPage.jsx";
 import DashBoard from "../src/Pages/DashBoard.jsx";
 import PricingPage from "./Pages/PricingPage.jsx";
 import HowDoesItWork from "../src/Pages/HowDoesItWork.jsx";
+import { ResumeTemplate } from "./Pages/ResumeTemplate.jsx";
+import FinalResume from "./Pages/FinalResume.jsx";
 
 const clerkPublishableKey =
   "pk_test_c2luY2VyZS1zaGVlcGRvZy0xNi5jbGVyay5hY2NvdW50cy5kZXYk";
@@ -22,6 +24,8 @@ const router = createBrowserRouter([
       { path: "/dashboard", element: <DashBoard /> },
       { path: "/upgrade", element: <PricingPage /> },
       { path: "/Howdoesitwork", element: <HowDoesItWork /> },
+      { path: "/ResumeTemplate/:id", element: <ResumeTemplate /> },
+      { path: "/ResumeTemplate/1/:finalID", element: <FinalResume /> },
     ],
   },
   { path: "/auth/sign-in", element: <AuthPage /> },
