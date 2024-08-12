@@ -1,16 +1,26 @@
 import { UserButton, useUser } from "@clerk/clerk-react";
+import { Link } from "react-router-dom";
+
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // optional: for smooth scrolling
+  });
+};
 
 const Navbar = () => {
   const { isSignedIn } = useUser();
   return (
     <>
-      <header className="mb-2 px-4 shadow sticky to bg-white">
+      <header className="mb-2 px-4 shadow bg-white sticky top-0 z-50">
         <div className="relative mx-auto flex max-w-screen-lg flex-col items-center justify-between py-4 sm:flex-row">
-          <img
-            src="https://meeting-scheduler-tubeguruji.vercel.app/logo.svg"
-            className="w-[150px] md:w-[200px]"
-            alt="logo"
-          />
+          <Link to={"/"} onClick={scrollToTop}>
+            <img
+              src="https://meeting-scheduler-tubeguruji.vercel.app/logo.svg"
+              className="w-[150px] md:w-[200px]"
+              alt="logo"
+            />
+          </Link>
           <input className="peer hidden" type="checkbox" id="navbar-open" />
           <label
             className="absolute right-0 mt-1 cursor-pointer text-xl sm:hidden"
@@ -36,19 +46,31 @@ const Navbar = () => {
           >
             <ul className="flex flex-col items-center gap-y-4 sm:flex-row sm:gap-x-8">
               <li>
-                <a className="text-gray-600 hover:text-[#0069ff]" href="#">
+                <Link
+                  to={"/dashboard"}
+                  onClick={scrollToTop}
+                  className="text-gray-600 hover:text-[#0069ff]"
+                >
                   Dashboard
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-[#0069ff]" href="#">
+                <Link
+                  to={"/upgrade"}
+                  onClick={scrollToTop}
+                  className="text-gray-600 hover:text-[#0069ff]"
+                >
                   Upgrade
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="text-gray-600 hover:text-[#0069ff]" href="#">
-                  How its Work?
-                </a>
+                <Link
+                  to={"/Howdoesitwork"}
+                  onClick={scrollToTop}
+                  className="text-gray-600 hover:text-[#0069ff]"
+                >
+                  How it's Work?
+                </Link>
               </li>
               {isSignedIn ? (
                 <UserButton />

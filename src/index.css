@@ -6,13 +6,37 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
 }
 
 body {
     height: 100vh;
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     background: url('https://ai-interview-mocker.vercel.app/grid.svg');
-    background-size: 90%;
+    background-size: 140%;
+    backdrop-filter: blur(3px);
+    /* Background blur */
+
 }
 
 @media screen and (max-width:700px) {
@@ -50,5 +74,41 @@ body {
     white-space: nowrap;
     overflow: hidden;
     border-right: 2px solid rgb(255, 255, 255);
-    animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+    animation: typing 1.6s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+/* Base styles for the sidebar */
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Show icons and text normally on larger screens */
+.sidebar-item svg {
+    margin-right: 1rem;
+}
+
+.sidebar-item span {
+    display: inline;
+}
+
+/* Responsive styles for small devices */
+@media (max-width: 768px) {
+
+    /* Hide the text and adjust icon margin on small devices */
+    .sidebar-item span {
+        display: none;
+    }
+
+    .sidebar-item svg {
+        margin-right: 0;
+    }
+
+    /* Show text when the item is hovered */
+    .sidebar-item:hover span {
+        display: inline;
+        margin-left: 0.5rem;
+    }
 }
